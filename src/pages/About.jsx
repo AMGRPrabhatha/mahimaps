@@ -41,7 +41,7 @@ function About() {
     <div className="about-page">
       <AnimatedSection className="about-hero-modern">
         <div className="about-hero-inner hero-ref-content">
-          <p className="hero-ref-kicker animate-fade-in">About Mahi Maps</p>
+          {/* <p className="hero-ref-kicker animate-fade-in">About Mahi Maps</p> */}
           <h1 className="hero-ref-title animate-slide-up-delay-1">Turn Your Journey into<br />Unforgettable <span className="accent">Memories</span></h1>
           <p className="hero-ref-desc animate-slide-up-delay-2">Explore the hidden gems of Sri Lanka with a team that blends local expertise, premium comfort, and true island hospitality.</p>
           <div className="about-hero-actions animate-fade-in-delay-3">
