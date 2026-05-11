@@ -646,3 +646,83 @@
         font-size: clamp(1.7rem, 7vw, 2.55rem);
     }
 }
+
+/* ===== About Final CTA Redesign ===== */
+.about-page .about-cta-modern {
+    padding: 1rem 0 4.6rem;
+}
+
+.about-page .about-cta-card {
+    position: relative;
+    overflow: hidden;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 2.4rem 1.45rem;
+    border-radius: 28px;
+    border: 1px solid #d3e0ee;
+    background:
+        radial-gradient(circle at 10% 16%, rgba(31, 143, 135, 0.18), transparent 38%),
+        radial-gradient(circle at 92% 10%, rgba(14, 36, 58, 0.15), transparent 44%),
+        linear-gradient(135deg, #fafdff 0%, #edf4fb 100%);
+    box-shadow: 0 20px 40px rgba(10, 24, 44, 0.14);
+    text-align: center;
+}
+
+.about-page .about-cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.05) 52%, rgba(9, 35, 56, 0.05) 100%);
+}
+
+.about-page .about-cta-card h2 {
+    position: relative;
+    margin: 0 0 0.72rem;
+    color: #102138;
+    font-size: clamp(1.9rem, 3.8vw, 3rem);
+    line-height: 1.08;
+}
+
+.about-page .about-cta-card p {
+    position: relative;
+    margin: 0 auto 1.25rem;
+    max-width: 760px;
+    color: #4b6078;
+    font-size: 1.03rem;
+    line-height: 1.72;
+}
+
+.about-page .about-cta-actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.about-page .about-cta-actions .hero-ref-btn {
+    min-width: 220px;
+}
+
+.about-page .about-cta-actions .hero-ref-btn.outline {
+    color: #102138;
+    border-color: #9ab1ca;
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.about-page .about-cta-actions .hero-ref-btn.outline:hover {
+    background: #ffffff;
+    border-color: #7896b7;
+}
+
+@media (max-width: 760px) {
+    .about-page .about-cta-card {
+        padding: 1.85rem 1rem;
+        border-radius: 22px;
+    }
+
+    .about-page .about-cta-card p {
+        font-size: 0.95rem;
+    }
+}

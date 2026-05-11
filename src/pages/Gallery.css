@@ -835,3 +835,78 @@ body.gallery-preview-open {
         font-size: 0.86rem;
     }
 }
+
+/* ===== Gallery Bottom CTA Redesign ===== */
+.gallery-page .gallery-cta-modern {
+    padding: 0.8rem 0 4.4rem;
+}
+
+.gallery-page .gallery-cta-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid #d4e2ef;
+    background:
+        radial-gradient(circle at 12% 12%, rgba(31, 143, 135, 0.16), transparent 36%),
+        radial-gradient(circle at 95% 14%, rgba(11, 33, 57, 0.14), transparent 45%),
+        linear-gradient(135deg, #fafdff 0%, #eef4fb 100%);
+    box-shadow: 0 20px 38px rgba(10, 24, 44, 0.14);
+    color: #102238;
+    padding: 2.35rem 1.25rem;
+    text-align: center;
+}
+
+.gallery-page .gallery-cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.1) 55%, rgba(9, 35, 56, 0.04) 100%);
+}
+
+.gallery-page .gallery-cta-card h2 {
+    position: relative;
+    margin: 0 0 0.66rem;
+    color: #102238;
+    font-size: clamp(1.85rem, 4vw, 2.9rem);
+    line-height: 1.08;
+}
+
+.gallery-page .gallery-cta-card p {
+    position: relative;
+    color: #4d6279;
+    max-width: 720px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.74;
+    font-size: 1.02rem;
+}
+
+.gallery-page .gallery-cta-card .hero-ref-actions {
+    position: relative;
+}
+
+.gallery-page .gallery-cta-card .hero-ref-btn {
+    min-width: 220px;
+}
+
+.gallery-page .gallery-cta-card .hero-ref-btn.outline {
+    color: #102238;
+    border-color: #9eb5cc;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-page .gallery-cta-card .hero-ref-btn.outline:hover {
+    background: #ffffff;
+    border-color: #7f9ebf;
+}
+
+@media (max-width: 760px) {
+    .gallery-page .gallery-cta-card {
+        border-radius: 22px;
+        padding: 1.8rem 0.95rem;
+    }
+
+    .gallery-page .gallery-cta-card p {
+        font-size: 0.93rem;
+    }
+}
