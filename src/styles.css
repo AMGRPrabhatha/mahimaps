@@ -369,7 +369,7 @@ body.mobile-menu-open {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.25s ease, visibility 0.25s ease;
-    z-index: 1200;
+    z-index: 1400;
     display: none;
     justify-content: flex-end;
 }
@@ -415,6 +415,20 @@ body.mobile-menu-open {
     display: flex;
     flex-direction: column;
     gap: 0.95rem;
+}
+
+.mobile-nav-panel-logo-wrap {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-nav-panel-logo-image {
+    width: 88px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
 }
 
 .mobile-nav-link {
@@ -3009,13 +3023,25 @@ section {
         padding: 0.65rem 0;
     }
 
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-right {
+        margin-left: auto;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
     .mobile-toggle {
         display: flex;
         z-index: 1250;
+        margin-left: 0;
     }
 
     .nav-logo {
-        z-index: 1250;
+        display: none !important;
     }
 
     #navMenuLeft,

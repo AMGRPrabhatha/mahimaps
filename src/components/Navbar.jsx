@@ -103,6 +103,14 @@ function Navbar() {
                 </li>
               ))}
             </ul>
+
+            <div className="mobile-nav-panel-logo-wrap" aria-hidden="true">
+              <img
+                src="/assets/images/mahi-logo.webp"
+                alt="Mahi Maps"
+                className="mobile-nav-panel-logo-image"
+              />
+            </div>
           </div>
         </div>
     </>
