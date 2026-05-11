@@ -12,7 +12,7 @@ function Gallery() {
     { category: 'destinations', img: '/assets/images/sigiriya-fortress.webp', title: 'Sigiriya Rock Fortress', desc: 'Ancient wonder of Sri Lanka' },
     { category: 'destinations', img: '/assets/images/mirissa-beach.webp', title: 'Mirissa Beach', desc: 'Tropical paradise' },
     { category: 'destinations', img: '/assets/images/hero-background-2.webp', title: 'Ella Hills', desc: 'Misty mountain beauty' },
-    { category: 'destinations', img: '/assets/images/galle-fort.webp', title: 'Galle Fort', desc: 'Colonial heritage site' },
+    { category: 'destinations', img: '/assets/images/galle.jpg', title: 'Galle Fort', desc: 'Colonial heritage site' },
     { category: 'destinations', img: '/assets/images/ella-nine-arch.webp', title: 'Nine Arch Bridge', desc: 'Architectural marvel' },
     { category: 'destinations', img: '/assets/images/kandy-temple.webp', title: 'Temple of the Tooth', desc: 'Sacred Buddhist temple' },
     

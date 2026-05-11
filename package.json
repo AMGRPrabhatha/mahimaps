@@ -7,7 +7,7 @@
     "start": "node server.js",
     "dev": "vite",
     "dev:full": "sh -c 'npm run server & npm run dev'",
-    "build": "vite build",
+    "build": "vite build && mkdir -p dist/assets && cp -R assets/images dist/assets/images && cp -R assets/tours dist/assets/tours",
     "preview": "vite preview",
     "server": "node server.js"
   },
