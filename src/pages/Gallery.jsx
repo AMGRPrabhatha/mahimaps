@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import './Gallery.css';
@@ -6,6 +6,7 @@ import './Gallery.css';
 function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [gallerySearch, setGallerySearch] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryItems = [
     // Destinations
@@ -58,6 +59,26 @@ function Gallery() {
     return byFilter && bySearch;
   });
 
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    if (selectedImage) {
+      document.body.classList.add('gallery-preview-open');
+      window.addEventListener('keydown', onKeyDown);
+    } else {
+      document.body.classList.remove('gallery-preview-open');
+    }
+
+    return () => {
+      document.body.classList.remove('gallery-preview-open');
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [selectedImage]);
+
   return (
     <div className="gallery-page">
       <AnimatedSection className="gallery-hero" style={{ backgroundImage: "url('/assets/images/gallery-hero.webp')" }}>
@@ -99,7 +120,21 @@ function Gallery() {
 
           <AnimatedSection className="gallery-grid" delay={0.3}>
             {filteredItems.map((item, index) => (
-              <div key={index} className="gallery-item" data-category={item.category}>
+              <div
+                key={index}
+                className="gallery-item"
+                data-category={item.category}
+                onClick={() => setSelectedImage(item)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setSelectedImage(item);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`Preview ${item.title}`}
+              >
                 <img src={item.img} alt={item.title} />
                 <div className="gallery-overlay">
                   <h3>{item.title}</h3>
@@ -123,6 +158,35 @@ function Gallery() {
           </div>
         </div>
       </AnimatedSection>
+
+      {selectedImage && (
+        <div
+          className="gallery-preview-modal"
+          onClick={() => setSelectedImage(null)}
+          aria-hidden="true"
+        >
+          <div
+            className="gallery-preview-dialog"
+            onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label={selectedImage.title}
+          >
+            <button
+              className="gallery-preview-close"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Close preview"
+            >
+              ×
+            </button>
+            <img src={selectedImage.img} alt={selectedImage.title} />
+            <div className="gallery-preview-meta">
+              <h3>{selectedImage.title}</h3>
+              <p>{selectedImage.desc}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
