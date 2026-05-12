@@ -24,7 +24,7 @@
             justify-content: center;
             background-image:
                 linear-gradient(110deg, rgba(6, 15, 31, 0.8) 0%, rgba(8, 18, 35, 0.46) 45%, rgba(7, 15, 29, 0.84) 100%),
-                url('/assets/images/hero-background.webp');
+                url('/assets/images/hero.jpg');
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -532,6 +532,127 @@
             letter-spacing: 0.06em;
         }
 
+        .home-dmc-section {
+            background: #f7fafc;
+            padding-top: 4.2rem;
+            padding-bottom: 5rem;
+        }
+
+        .home-dmc-heading {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 2.4rem;
+        }
+
+        .home-dmc-heading h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.1;
+            font-weight: 700;
+            color: #101f35;
+        }
+
+        .home-dmc-heading h2 span {
+            display: block;
+            color: #0f172a;
+        }
+
+        .home-dmc-grid {
+            display: grid;
+            grid-template-columns: minmax(210px, 0.95fr) minmax(340px, 1.25fr) minmax(210px, 0.95fr);
+            gap: 1.3rem;
+            align-items: center;
+        }
+
+        .home-dmc-image-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 520px;
+            background: #dbe6f1;
+            box-shadow: 0 10px 28px rgba(11, 27, 46, 0.12);
+        }
+
+        .home-dmc-image-wrap img {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            object-fit: cover;
+        }
+
+        .home-dmc-content {
+            padding: 0.8rem 1.6rem;
+        }
+
+        .home-dmc-content h3 {
+            font-size: clamp(1.35rem, 2.3vw, 2rem);
+            line-height: 1.25;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .home-dmc-content p {
+            color: #4b6078;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 1.4rem;
+        }
+
+        .home-dmc-content ul {
+            list-style: none;
+            display: grid;
+            gap: 0.78rem;
+            margin: 0 0 1.65rem;
+            padding: 0;
+        }
+
+        .home-dmc-content li {
+            color: #2f3f54;
+            font-size: 1rem;
+            line-height: 1.55;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-weight: 500;
+        }
+
+        .home-dmc-content li i {
+            color: #1f8f87;
+            margin-top: 0.18rem;
+            font-size: 0.95rem;
+        }
+
+        .home-dmc-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            color: #14396a;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .home-dmc-cta-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #163f83;
+            color: #ffffff;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 20px rgba(22, 63, 131, 0.24);
+        }
+
+        .home-dmc-cta:hover {
+            color: #0f2e58;
+        }
+
+        .home-dmc-cta:hover .home-dmc-cta-icon {
+            transform: translateY(-1px);
+        }
+
         .workflow-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -634,7 +755,7 @@
         }
 
 .modern-routes-section {
-    background: url('/assets/images/hero-background-2.webp') center/cover no-repeat fixed;
+    background: url('/assets/images/hero-background-2.webp') center/cover no-repeat;
     position: relative;
     overflow: hidden;
     padding: 6rem 0;
@@ -644,7 +765,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(45, 143, 134, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(45, 143, 134, 0.1) 100%);
     z-index: 0;
     pointer-events: none;
 }
@@ -689,6 +810,7 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    min-width: 0; /* Important for flex children */
 }
 
 .modern-route-item::after {
@@ -886,7 +1008,77 @@
 
 @media (max-width: 1024px) {
     .modern-routes-board {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        gap: 1.2rem;
+        padding: 1rem 0.5rem 2rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .modern-routes-board::-webkit-scrollbar {
+        display: none;
+    }
+    .modern-routes-board .modern-route-item {
+        flex: 0 0 80%; /* Show 80% of card to reveal next one */
+        min-width: 280px;
+        scroll-snap-align: center;
+        margin-bottom: 0;
+    }
+    .routes-nav-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+    }
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid rgba(45, 143, 134, 0.2);
+        color: var(--home-teal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    .slider-btn:active {
+        transform: scale(0.9);
+        background: #f0fdfa;
+    }
+    .modern-routes-section {
+        overflow: visible;
+    }
+    .home-dmc-grid {
         grid-template-columns: 1fr;
+        gap: 1.1rem;
+    }
+
+    .home-dmc-content {
+        order: 1;
+        padding: 0.2rem 0.25rem 0.5rem;
+    }
+
+    .home-dmc-image-wrap {
+        min-height: 360px;
+    }
+
+    .home-dmc-image-wrap img {
+        min-height: 360px;
+    }
+
+    .home-dmc-image-wrap.left-image {
+        order: 2;
+    }
+
+    .home-dmc-image-wrap.right-image {
+        order: 3;
     }
 }
 
@@ -915,6 +1107,30 @@
         border-top: 1px dashed #e2e8f0;
         padding-top: 1rem;
     }
+
+    .home-dmc-section {
+        padding-top: 3.2rem;
+        padding-bottom: 3.8rem;
+    }
+
+    .home-dmc-heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .home-dmc-content h3 {
+        font-size: 1.24rem;
+    }
+
+    .home-dmc-content p,
+    .home-dmc-content li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .home-dmc-image-wrap,
+    .home-dmc-image-wrap img {
+        min-height: 280px;
+    }
 }
 
 /* Micro-pass: Brand Alignment */
@@ -930,7 +1146,7 @@
 .home-shell h1,
 .home-shell h2,
 .home-shell h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-primary);
     letter-spacing: -0.01em;
     color: var(--brand-ink);
 }
@@ -942,7 +1158,7 @@
 .home-shell label,
 .home-shell input,
 .home-shell select {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-primary);
 }
 
 .home-shell .home-hero-title {
@@ -951,7 +1167,7 @@
 }
 
 .home-shell .hero-ref-btn {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-primary);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     font-weight: 700;
@@ -1533,33 +1749,7 @@
                 min-height: 400px;
             }
 
-            .routes-nav-mobile {
-                display: flex;
-                justify-content: center;
-                gap: 1.5rem;
-                margin-top: 0.2rem;
-            }
 
-            .slider-btn {
-                width: 46px;
-                height: 46px;
-                border-radius: 50%;
-                background: #fff;
-                border: 1px solid var(--home-border);
-                color: #2d8f86;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 6px 16px rgba(15, 32, 53, 0.12);
-                cursor: pointer;
-                font-size: 1.1rem;
-                transition: all 0.2s ease;
-            }
-
-            .slider-btn:active {
-                transform: scale(0.9);
-                background: #f8fbff;
-            }
         }
 
 /* Smart Way Section */

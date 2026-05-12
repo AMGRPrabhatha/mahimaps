@@ -7,7 +7,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/contact-hero.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/contacthero.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -452,7 +452,7 @@
 .contact-page h2,
 .contact-page h3,
 .contact-page h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-primary);
   letter-spacing: -0.01em;
   color: var(--brand-ink);
 }
@@ -474,12 +474,12 @@
 .contact-page label,
 .contact-page input,
 .contact-page textarea {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .contact-page .hero-ref-btn,
 .contact-page .contact-submit {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-primary);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 700;

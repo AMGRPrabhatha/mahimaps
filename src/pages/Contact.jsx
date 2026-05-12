@@ -55,9 +55,9 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      <AnimatedSection className="contact-hero" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/contact-hero.webp')" }}>
+      <AnimatedSection className="contact-hero" style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/contacthero.jpg')" }}>
         <div className="container hero-ref-content">
-          <p className="hero-ref-kicker animate-fade-in">Get In Touch</p>
+          {/* <p className="hero-ref-kicker animate-fade-in">Get In Touch</p> */}
           <h1 className="hero-ref-title animate-slide-up-delay-1">Let's Plan Your <span className="accent">Journey</span></h1>
           <p className="hero-ref-desc animate-slide-up-delay-2">If you have any questions, feel free to get in touch via phone, text, email, or our contact form.</p>
           <div className="hero-ref-actions animate-fade-in-delay-3">

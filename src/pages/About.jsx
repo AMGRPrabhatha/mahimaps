@@ -37,6 +37,30 @@ function About() {
     }
   ];
 
+  const feedbacks = [
+    {
+      name: "Emma R.",
+      country: "United Kingdom",
+      title: "Perfectly planned island route",
+      message: "From airport pickup to our final beach stop, everything was on time and stress-free. Our driver suggested great local spots we would have missed.",
+      rating: 5
+    },
+    {
+      name: "Nimal P.",
+      country: "Sri Lanka",
+      title: "Very professional team",
+      message: "Clear communication, clean vehicle, and fair pricing. The itinerary was adjusted quickly when our plans changed, which helped a lot.",
+      rating: 5
+    },
+    {
+      name: "Sofia M.",
+      country: "Italy",
+      title: "Safe and comfortable travel",
+      message: "As a family with kids, comfort and safety mattered most. Mahi Maps delivered both and made our round trip smooth across multiple cities.",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="about-page">
       <AnimatedSection className="about-hero-modern">
@@ -80,9 +104,9 @@ function About() {
             </article>
 
             <div className="story-visual">
-              <img src="/assets/images/tour-hero.webp" alt="Scenic tour in Sri Lanka" className="tall" />
-              <img src="/assets/images/sigiriya-fortress.webp" alt="Sigiriya destination" />
-              <img src="/assets/images/mirissa-beach.webp" alt="Mirissa beach adventure" />
+              <img src="/assets/images/about1.jpg" alt="Scenic tour in Sri Lanka" className="tall" />
+              <img src="/assets/images/about2.jpg" alt="Sigiriya destination" />
+              <img src="/assets/images/about3.jpg" alt="Mirissa beach adventure" />
             </div>
           </div>
         </div>
@@ -148,32 +172,36 @@ function About() {
 
       <AnimatedSection className="about-faq" delay={0.2}>
         <div className="container">
-          <div className="faq-grid-modern">
-            <aside className="faq-side">
-              <p className="section-kicker">FAQs</p>
-              <h2>Common Questions</h2>
-              <p>If this is your first time planning a Sri Lanka trip, these answers help you book faster and travel with confidence.</p>
-              <div className="faq-contact-card">
-                <h3>Need a custom itinerary?</h3>
-                <p>Share your trip dates and preferred destinations. We will help craft the best route for you.</p>
-                <Link to="/contact" className="hero-ref-btn primary" style={{ display: 'inline-flex', minWidth: '0' }}>Contact Us</Link>
+          <div className="faq-showcase">
+            <aside className="faq-visual-card">
+              <div className="faq-visual-overlay">
+                <p className="faq-visual-kicker">Common Questions</p>
+                <h2>Everything You Need to Know</h2>
+                <p>Quick answers for planning a smooth Sri Lanka journey with Mahi Maps.</p>
+                <Link to="/contact" className="faq-visual-link">
+                  <i className="fas fa-plus"></i>
+                  <span>Talk to Our Team</span>
+                </Link>
               </div>
             </aside>
 
-            <div className="faq-list-panel">
-              <div className="faq-list-modern">
+            <div className="faq-accordion-card">
+              <div className="faq-accordion-list">
                 {faqs.map((faq, index) => (
-                  <div key={index} className={`faq-item-modern ${activeFaq === index ? 'active' : ''}`}>
-                    <div className="faq-question-modern" onClick={() => toggleFaq(index)}>
-                      {faq.question}
-                      <span className="faq-toggle-icon">
-                        <i className={`fas ${activeFaq === index ? 'fa-times' : 'fa-plus'}`}></i>
-                      </span>
-                    </div>
-                    <div className="faq-answer-modern" style={{ maxHeight: activeFaq === index ? '200px' : '0' }}>
+                  <article key={index} className={`faq-accordion-item ${activeFaq === index ? 'active' : ''}`}>
+                    <button
+                      type="button"
+                      className="faq-accordion-question"
+                      onClick={() => toggleFaq(index)}
+                      aria-expanded={activeFaq === index}
+                    >
+                      <span>{faq.question}</span>
+                      <i className={`fas ${activeFaq === index ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+                    </button>
+                    <div className="faq-accordion-answer" style={{ maxHeight: activeFaq === index ? '260px' : '0' }}>
                       <p>{faq.answer}</p>
                     </div>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
@@ -190,6 +218,37 @@ function About() {
               <Link to="/tours" className="hero-ref-btn primary">View Tour Packages</Link>
               <Link to="/contact" className="hero-ref-btn outline">Contact the Team</Link>
             </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="about-feedback" delay={0.2}>
+        <div className="container">
+          <div className="about-feedback-head">
+            <p className="section-kicker">Traveler Feedback</p>
+            <h2>What Our Guests Say</h2>
+            <p>Real feedback from travelers who explored Sri Lanka with Mahi Maps.</p>
+          </div>
+
+          <div className="about-feedback-grid">
+            {feedbacks.map((item, index) => (
+              <article key={index} className="feedback-card">
+                <div className="feedback-top">
+                  <div className="feedback-avatar">{item.name.charAt(0)}</div>
+                  <div className="feedback-person">
+                    <strong>{item.name}</strong>
+                    <span>{item.country}</span>
+                  </div>
+                  <div className="feedback-rating" aria-label={`${item.rating} star rating`}>
+                    {Array.from({ length: item.rating }).map((_, i) => (
+                      <i key={i} className="fas fa-star"></i>
+                    ))}
+                  </div>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.message}</p>
+              </article>
+            ))}
           </div>
         </div>
       </AnimatedSection>

@@ -12,7 +12,7 @@ function Gallery() {
     // Destinations
     { category: 'destinations', img: '/assets/images/sigiriya-fortress.webp', title: 'Sigiriya Rock Fortress', desc: 'Ancient wonder of Sri Lanka' },
     { category: 'destinations', img: '/assets/images/mirissa-beach.webp', title: 'Mirissa Beach', desc: 'Tropical paradise' },
-    { category: 'destinations', img: '/assets/images/hero-background-2.webp', title: 'Ella Hills', desc: 'Misty mountain beauty' },
+    { category: 'destinations', img: '/assets/images/ella-nine-arch.webp', title: 'Ella Hills', desc: 'Misty mountain beauty' },
     { category: 'destinations', img: '/assets/images/galle.jpg', title: 'Galle Fort', desc: 'Colonial heritage site' },
     { category: 'destinations', img: '/assets/images/ella-nine-arch.webp', title: 'Nine Arch Bridge', desc: 'Architectural marvel' },
     { category: 'destinations', img: '/assets/images/kandy-temple.webp', title: 'Temple of the Tooth', desc: 'Sacred Buddhist temple' },
@@ -33,18 +33,18 @@ function Gallery() {
     
     // Tours
     { category: 'tours', img: '/assets/images/yala-national-park.webp', title: 'Wildlife Safari', desc: 'Yala National Park' },
-    { category: 'tours', img: '/assets/images/hero-background-4.webp', title: 'Tea Plantation Tour', desc: 'Hill country experience' },
-    { category: 'tours', img: '/assets/images/hero-background-5.webp', title: 'Whale Watching', desc: 'Mirissa coast' },
+    { category: 'tours', img: '/assets/images/contacthero.jpg', title: 'Tea Plantation Tour', desc: 'Hill country experience' },
+    { category: 'tours', img: '/assets/images/mirissa-beach.webp', title: 'Whale Watching', desc: 'Mirissa coast' },
     { category: 'tours', img: '/assets/images/ella-nine-arch.webp', title: 'Train Journey', desc: 'Kandy to Ella scenic route' },
     
     // Travelers
     { category: 'travelers', img: '/assets/images/friends-together.webp', title: 'Happy Travelers', desc: 'Making memories' },
     { category: 'travelers', img: '/assets/images/family-activities.webp', title: 'Family Adventure', desc: 'Creating lasting bonds' },
-    { category: 'travelers', img: '/assets/images/unique-adventures.webp', title: 'Group Tour', desc: 'Friends exploring together' },
+    { category: 'travelers', img: '/assets/images/vehicleshero.jpg', title: 'Group Tour', desc: 'Friends exploring together' },
     { category: 'travelers', img: '/assets/images/weekend-adventures.webp', title: 'Romantic Getaway', desc: 'Couples retreat' },
     
     // More Destinations
-    { category: 'destinations', img: '/assets/images/hero-background-3.webp', title: 'Unawatuna Beach', desc: 'Crystal clear waters' },
+    { category: 'destinations', img: '/assets/images/unawatuna.jpg', title: 'Unawatuna Beach', desc: 'Crystal clear waters' },
     { category: 'destinations', img: '/assets/images/yala-national-park.webp', title: 'Yala National Park', desc: 'Wildlife wonderland' }
   ];
 
@@ -81,9 +81,9 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
-      <AnimatedSection className="gallery-hero" style={{ backgroundImage: "url('/assets/images/gallery-hero.webp')" }}>
+      <AnimatedSection className="gallery-hero" style={{ backgroundImage: "url('/assets/images/galleryhero.jpg')" }}>
         <div className="container hero-ref-content">
-          <p className="hero-ref-kicker animate-fade-in">Travel Stories</p>
+          {/* <p className="hero-ref-kicker animate-fade-in">Travel Stories</p> */}
           <h1 className="hero-ref-title animate-slide-up-delay-1">Our <span className="accent">Gallery</span></h1>
           <p className="hero-ref-desc animate-slide-up-delay-2">Moments captured from unforgettable journeys</p>
           <div className="hero-ref-actions animate-fade-in-delay-3">

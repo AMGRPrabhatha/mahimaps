@@ -38,8 +38,8 @@
     --gradient-ocean: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
 
     /* Typography */
-    --font-primary: sans-serif;
-    --font-secondary: sans-serif;
+    --font-primary: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-secondary: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -235,12 +235,20 @@ ul {
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 10px 24px rgba(9, 23, 42, 0.12);
-    border-bottom: 1px solid rgba(16, 33, 56, 0.12);
+    background: rgba(8, 22, 40, 0.42);
+    backdrop-filter: blur(18px) saturate(165%);
+    -webkit-backdrop-filter: blur(18px) saturate(165%);
+    box-shadow: 0 10px 24px rgba(4, 12, 24, 0.24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     padding: 0.75rem 0;
+}
+
+.navbar.light {
+    background: rgba(8, 22, 40, 0.42);
+    backdrop-filter: blur(18px) saturate(165%);
+    -webkit-backdrop-filter: blur(18px) saturate(165%);
+    box-shadow: 0 10px 24px rgba(4, 12, 24, 0.24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .nav-container {
@@ -266,7 +274,7 @@ ul {
 }
 
 .nav-logo-image {
-    height: 45px;
+    height: 56px;
     transition: filter 0.25s ease;
 }
 
@@ -275,7 +283,7 @@ ul {
 }
 
 .nav-logo-image.dark-logo {
-    filter: none;
+    filter: brightness(0) invert(1);
 }
 
 .logo-icon {
@@ -325,19 +333,19 @@ ul {
 
 .navbar.scrolled .nav-link,
 .navbar.light .nav-link {
-    color: #102138;
+    color: rgba(255, 255, 255, 0.96);
 }
 
 .navbar.scrolled .nav-link::after,
 .navbar.light .nav-link::after {
-    background: #102138;
+    background: rgba(255, 255, 255, 0.96);
 }
 
 .navbar.scrolled .nav-link:hover,
 .navbar.scrolled .nav-link.active,
 .navbar.light .nav-link:hover,
 .navbar.light .nav-link.active {
-    color: #0b3140;
+    color: #ffffff;
 }
 
 .mobile-toggle {
@@ -384,8 +392,8 @@ body.mobile-menu-open {
     width: min(84vw, 360px);
     height: 100%;
     margin-left: auto;
-    background: #030508;
-    padding: 1.25rem 1.4rem 1.8rem;
+    background: #02050a;
+    padding: 1.5rem 1.75rem 1.9rem;
     display: flex;
     flex-direction: column;
     color: #ffffff;
@@ -398,51 +406,76 @@ body.mobile-menu-open {
     transform: translateX(0);
 }
 
+.mobile-nav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mobile-nav-brand {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
 .mobile-nav-close {
     border: none;
     background: transparent;
     color: #ffffff;
-    font-size: 2.8rem;
+    font-size: 3rem;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 300;
     cursor: pointer;
     padding: 0;
-    margin-left: auto;
+    margin-left: 0;
+    margin-top: -0.15rem;
 }
 
 .mobile-nav-links {
-    margin-top: 1rem;
+    margin-top: 3.2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.95rem;
-}
-
-.mobile-nav-panel-logo-wrap {
-    margin-top: auto;
-    padding-top: 1.25rem;
-    display: flex;
-    justify-content: center;
-}
-
-.mobile-nav-panel-logo-image {
-    width: 88px;
-    height: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.95;
+    gap: 2.15rem;
+    padding-left: 0;
 }
 
 .mobile-nav-link {
     color: #ffffff;
-    font-size: clamp(2rem, 8vw, 2.9rem);
+    font-size: clamp(1.95rem, 9.6vw, 3.2rem);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.015em;
-    line-height: 1.02;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    display: inline-block;
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
     color: #8ee5d8;
+}
+
+.mobile-nav-footer {
+    margin-top: auto;
+    padding-top: 1.65rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mobile-nav-footer-title {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.mobile-nav-footer-subtitle {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 /* ===== BUTTONS ===== */
@@ -506,9 +539,11 @@ body.mobile-menu-open {
 
 .navbar.scrolled .btn-book-nav,
 .navbar.light .btn-book-nav {
-    background: #102138;
+    background: rgba(255, 255, 255, 0.12);
     color: #ffffff;
-    border-color: #102138;
+    border-color: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .navbar.scrolled .btn-book-nav:hover,
@@ -520,7 +555,7 @@ body.mobile-menu-open {
 
 .navbar.scrolled .mobile-toggle span,
 .navbar.light .mobile-toggle span {
-    background: #102138;
+    background: #ffffff;
 }
 
 /* ===== HERO SECTION ===== */
@@ -3024,24 +3059,40 @@ section {
     }
 
     .nav-container {
+        position: relative;
         justify-content: space-between;
         align-items: center;
+        padding: 0 1rem;
+    }
+
+    .nav-logo {
+        display: flex !important;
+        position: relative;
+        left: auto;
+        transform: none;
+        order: 1;
+        z-index: 1250;
+    }
+
+    .nav-logo-image {
+        height: 44px;
     }
 
     .nav-right {
+        order: 2;
         margin-left: auto;
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
         gap: 0;
     }
 
     .mobile-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 1250;
         margin-left: 0;
-    }
-
-    .nav-logo {
-        display: none !important;
     }
 
     #navMenuLeft,
@@ -3054,7 +3105,10 @@ section {
     }
 
     .mobile-toggle span {
+        width: 30px;
+        height: 3.5px;
         background: rgba(255, 255, 255, 0.96);
+        border-radius: 999px;
     }
 
     .desktop-only-btn {
@@ -5251,17 +5305,17 @@ section {
     gap: 2.5rem;
 }
 
-.mobile-nav-links {
+.mobile-menu-body .mobile-nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.mobile-nav-links li {
+.mobile-menu-body .mobile-nav-links li {
     margin-bottom: 1.8rem;
 }
 
-.mobile-nav-links a {
+.mobile-menu-body .mobile-nav-links a {
     color: #ffffff;
     font-size: clamp(2.2rem, 8vw, 3rem);
     font-weight: 800;
@@ -5273,7 +5327,7 @@ section {
     display: inline-block;
 }
 
-.mobile-nav-links a:hover {
+.mobile-menu-body .mobile-nav-links a:hover {
     color: #9de9df;
     padding-left: 10px;
 }
@@ -5319,4 +5373,95 @@ section {
 /* Hide WhatsApp button when menu is open */
 body.menu-open .whatsapp-float {
     display: none;
+}
+
+/* ===== Global Sans-Serif + Unified Hero Sizing (Match Vehicles Baseline) ===== */
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    letter-spacing: -0.01em;
+}
+
+.hero-ref-title,
+.home-hero-title,
+.about-hero-inner .hero-ref-title,
+.contact-hero .hero-ref-title,
+.gallery-hero .hero-ref-title,
+.tours-hero-inner h1,
+.vehicles-hero-inner h1 {
+    font-size: clamp(2rem, 4.9vw, 3.45rem) !important;
+    line-height: 1.05 !important;
+}
+
+.hero-ref-desc,
+.home-hero-desc,
+.about-hero-inner .hero-ref-desc,
+.contact-hero .hero-ref-desc,
+.gallery-hero .hero-ref-desc,
+.tours-hero-inner p,
+.vehicles-hero-inner p {
+    font-size: 1rem !important;
+    line-height: 1.72 !important;
+    max-width: 760px !important;
+}
+
+.home-hero-actions,
+.about-hero-actions,
+.contact-hero .hero-ref-actions,
+.gallery-hero .hero-ref-actions,
+.tours-hero-cta,
+.vehicles-hero-actions {
+    margin-top: 1.35rem !important;
+    gap: 0.72rem !important;
+}
+
+.home-hero-actions .hero-ref-btn,
+.about-hero-actions .hero-ref-btn,
+.contact-hero .hero-ref-actions .hero-ref-btn,
+.gallery-hero .hero-ref-actions .hero-ref-btn,
+.tours-hero-cta .hero-ref-btn,
+.vehicles-hero-actions .vehicle-btn {
+    min-width: 180px !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.07em !important;
+    font-size: 0.79rem !important;
+    font-weight: 700 !important;
+    padding: 0.85rem 1.15rem !important;
+}
+
+@media (max-width: 768px) {
+    .hero-ref-desc,
+    .home-hero-desc,
+    .about-hero-inner .hero-ref-desc,
+    .contact-hero .hero-ref-desc,
+    .gallery-hero .hero-ref-desc,
+    .tours-hero-inner p,
+    .vehicles-hero-inner p {
+        font-size: 0.92rem !important;
+        line-height: 1.58 !important;
+    }
+
+    .home-hero-actions .hero-ref-btn,
+    .about-hero-actions .hero-ref-btn,
+    .contact-hero .hero-ref-actions .hero-ref-btn,
+    .gallery-hero .hero-ref-actions .hero-ref-btn,
+    .tours-hero-cta .hero-ref-btn,
+    .vehicles-hero-actions .vehicle-btn {
+        width: min(90%, 320px) !important;
+        min-width: 0 !important;
+    }
 }

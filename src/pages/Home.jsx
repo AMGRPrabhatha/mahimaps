@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import './Home.css';
 
 function Home() {
+  const routesRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    if (!routesRef.current) return;
+    const scrollAmount = routesRef.current.offsetWidth;
+    routesRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  };
   const handleBookingSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -127,7 +137,7 @@ function Home() {
             
             <div className="smart-way-visual">
               <div className="smart-visual-card">
-                <img src="/assets/images/tour-hero.webp" alt="Sri Lanka Route Highlights" className="smart-visual-img" />
+                <img src="/assets/images/tour-hero.jpg" alt="Sri Lanka Route Highlights" className="smart-visual-img" />
                 <div className="smart-visual-overlay">
                   <div className="overlay-badge">
                     <i className="fas fa-map-pin"></i> Island-Wide
@@ -236,6 +246,44 @@ function Home() {
         </div>
       </AnimatedSection>
 
+      <AnimatedSection className="home-section home-dmc-section" delay={0.2}>
+        <div className="container">
+          <div className="home-dmc-heading">
+            <h2>
+              Sri Lanka&apos;s Trusted
+              <span> Travel & Destination Team</span>
+            </h2>
+          </div>
+
+          <div className="home-dmc-grid">
+            <div className="home-dmc-image-wrap left-image">
+              <img src="/assets/images/ella-nine-arch.webp" alt="Traveler on Nine Arch Bridge route" />
+            </div>
+
+            <article className="home-dmc-content">
+              <h3>Plan with a local team that knows every route</h3>
+              <p>
+                Mahi Maps combines private transfers, tour planning, and on-ground support to help you travel Sri Lanka comfortably.
+                From airport pickup to multi-day journeys, we tailor each plan to your pace, budget, and interests.
+              </p>
+              <ul>
+                <li><i className="fas fa-check-circle"></i> Personalized trips for couples, families, and groups</li>
+                <li><i className="fas fa-check-circle"></i> Professional drivers and clean, air-conditioned vehicles</li>
+                <li><i className="fas fa-check-circle"></i> Fast WhatsApp confirmation with clear pricing</li>
+              </ul>
+              <Link to="/about" className="home-dmc-cta">
+                <span className="home-dmc-cta-icon"><i className="fas fa-plus"></i></span>
+                About Us
+              </Link>
+            </article>
+
+            <div className="home-dmc-image-wrap right-image">
+              <img src="/assets/images/galle.jpg" alt="Sri Lanka southern coastline" />
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
       <AnimatedSection className="home-section modern-routes-section" delay={0.2}>
         <div className="container">
           <div className="section-head-home center-aligned">
@@ -244,13 +292,7 @@ function Home() {
             <p>Direct trips to Sri Lanka's top destinations. Prices depend on vehicle type and exact location.</p>
           </div>
 
-          <motion.div 
-            className="modern-routes-board"
-            variants={routeContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
+            <motion.div className="modern-routes-board" ref={routesRef} variants={routeContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} >
             <motion.a variants={routeItemVariants} href="https://wa.me/94743592570?text=I'd%20like%20a%20price%20for%20Airport%20to%20Galle/Unawatuna" className="modern-route-item" target="_blank" rel="noreferrer">
               <div className="route-locations">
                 <div className="route-point origin">
@@ -400,7 +442,11 @@ function Home() {
                 <i className="fas fa-chevron-right"></i>
               </div>
             </motion.a>
-          </motion.div>
+            </motion.div>
+            <div className="routes-nav-mobile">
+              <button className="slider-btn" onClick={() => handleScroll('left')}><i className="fas fa-chevron-left"></i></button>
+              <button className="slider-btn" onClick={() => handleScroll('right')}><i className="fas fa-chevron-right"></i></button>
+            </div>
         </div>
       </AnimatedSection>
 

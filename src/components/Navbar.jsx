@@ -90,9 +90,12 @@ function Navbar() {
 
       <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'active' : ''}`} aria-hidden={!mobileMenuOpen}>
           <div className="mobile-nav-panel">
-            <button className="mobile-nav-close" onClick={toggleMobileMenu} aria-label="Close menu">
-              ×
-            </button>
+            <div className="mobile-nav-head">
+              <div className="mobile-nav-brand">MAHI MAPS</div>
+              <button className="mobile-nav-close" onClick={toggleMobileMenu} aria-label="Close menu">
+                ×
+              </button>
+            </div>
 
             <ul className="mobile-nav-links">
               {navLinks.map((link) => (
@@ -104,12 +107,9 @@ function Navbar() {
               ))}
             </ul>
 
-            <div className="mobile-nav-panel-logo-wrap" aria-hidden="true">
-              <img
-                src="/assets/images/mahi-logo.webp"
-                alt="Mahi Maps"
-                className="mobile-nav-panel-logo-image"
-              />
+            <div className="mobile-nav-footer" aria-hidden="true">
+              <p className="mobile-nav-footer-title">Mahi Maps Tours</p>
+              <p className="mobile-nav-footer-subtitle">EXPLORING SRI LANKA</p>
             </div>
           </div>
         </div>

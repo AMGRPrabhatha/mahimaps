@@ -15,13 +15,13 @@
 
 .tours-page-modern,
 .tours-page-modern * {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .tours-page-modern h1,
 .tours-page-modern h2,
 .tours-page-modern h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-primary);
   letter-spacing: -0.01em;
 }
 
