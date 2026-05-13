@@ -1059,7 +1059,7 @@ body.mobile-menu-open {
 /* Photo Card (Bottom Left) */
 .bento-photo {
     grid-column: span 8;
-    background-image: url('/assets/images/hero-background-4.webp');
+    background-image: url('/assets/images/hero-background.webp');
     background-size: cover;
     background-position: center;
     min-height: 220px;

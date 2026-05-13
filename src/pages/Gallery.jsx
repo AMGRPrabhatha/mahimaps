@@ -44,7 +44,7 @@ function Gallery() {
     { category: 'travelers', img: '/assets/images/weekend-adventures.webp', title: 'Romantic Getaway', desc: 'Couples retreat' },
     
     // More Destinations
-    { category: 'destinations', img: '/assets/images/unawatuna.jpg', title: 'Unawatuna Beach', desc: 'Crystal clear waters' },
+    { category: 'destinations', img: '/assets/images/Unawatuna.jpg', title: 'Unawatuna Beach', desc: 'Crystal clear waters' },
     { category: 'destinations', img: '/assets/images/yala-national-park.webp', title: 'Yala National Park', desc: 'Wildlife wonderland' }
   ];
 
