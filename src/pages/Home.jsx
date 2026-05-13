@@ -458,20 +458,26 @@ function Home() {
           </div>
 
           <div className="workflow-grid text-center">
-            <div className="workflow-step" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div className="workflow-step">
               <div className="step-no">1</div>
-              <h3>Send Your Details</h3>
-              <p>Tell us your pickup spot, drop-off location, date, and passenger count via WhatsApp or the booking form.</p>
+              <div className="step-content">
+                <h3>Send Your Details</h3>
+                <p>Tell us your pickup spot, drop-off location, date, and passenger count via WhatsApp or the booking form.</p>
+              </div>
             </div>
-            <div className="workflow-step" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div className="workflow-step">
               <div className="step-no">2</div>
-              <h3>Get the Price</h3>
-              <p>We'll reply quickly with a clear, fixed price based on your requirements and the best vehicle for you.</p>
+              <div className="step-content">
+                <h3>Get the Price</h3>
+                <p>We'll reply quickly with a clear, fixed price based on your requirements and the best vehicle for you.</p>
+              </div>
             </div>
-            <div className="workflow-step" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div className="workflow-step">
               <div className="step-no">3</div>
-              <h3>Enjoy the Ride</h3>
-              <p>Your driver will be there on time. Relax in air-conditioned comfort as we take you to your destination.</p>
+              <div className="step-content">
+                <h3>Enjoy the Ride</h3>
+                <p>Your driver will be there on time. Relax in air-conditioned comfort as we take you to your destination.</p>
+              </div>
             </div>
           </div>
         </div>
