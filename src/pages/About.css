@@ -21,7 +21,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(6, 12, 26, 0.58) 0%, rgba(6, 12, 26, 0.5) 45%, rgba(6, 12, 26, 0.72) 100%);
+            background: linear-gradient(180deg, rgba(6, 12, 26, 0.35) 0%, rgba(6, 12, 26, 0.25) 45%, rgba(6, 12, 26, 0.45) 100%);
         }
 
         .about-hero-inner {
@@ -584,7 +584,7 @@ backdrop-filter: blur(8px);
 }
 
 .about-page .about-hero-modern::before {
-  background: linear-gradient(140deg, rgba(7, 17, 32, 0.78) 0%, rgba(9, 35, 52, 0.62) 48%, rgba(7, 17, 32, 0.78) 100%);
+  background: linear-gradient(140deg, rgba(7, 17, 32, 0.45) 0%, rgba(9, 35, 52, 0.3) 48%, rgba(7, 17, 32, 0.45) 100%);
 }
 
 .about-page .story-text,
@@ -1133,4 +1133,17 @@ backdrop-filter: blur(8px);
         line-height: 1.7;
         padding-bottom: 0.95rem;
     }
+}
+
+/* Global Hero Centering Override */
+body .about-hero-modern {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+body .about-hero-inner {
+    width: 100% !important;
+    padding: 0 1.5rem !important;
+    margin: 0 auto !important;
 }

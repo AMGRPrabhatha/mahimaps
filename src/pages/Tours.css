@@ -34,7 +34,7 @@
   min-height: 100svh;
   padding: 7.8rem 0 3.4rem;
   margin-bottom: 1.2rem;
-  background: linear-gradient(135deg, rgba(8, 21, 39, 0.78), rgba(12, 47, 66, 0.62)),
+  background: linear-gradient(135deg, rgba(8, 21, 39, 0.45), rgba(12, 47, 66, 0.35)),
     url('/assets/images/hero-background.webp') center/cover no-repeat;
 }
 
@@ -376,4 +376,17 @@
   .tour-card-image-wrap {
     height: 150px;
   }
+}
+
+/* Global Hero Centering Override */
+body .tours-hero-banner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+body .tours-hero-inner {
+    width: 100% !important;
+    padding: 0 1.5rem !important;
+    margin: 0 auto !important;
 }

@@ -7,7 +7,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/images/contacthero.jpg');
+            background-image: url('/assets/images/contacthero.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -503,7 +503,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg, rgba(7, 17, 32, 0.76) 0%, rgba(9, 35, 52, 0.58) 48%, rgba(7, 17, 32, 0.76) 100%);
+  background: linear-gradient(140deg, rgba(7, 17, 32, 0.45) 0%, rgba(9, 35, 52, 0.3) 48%, rgba(7, 17, 32, 0.45) 100%);
   z-index: 0;
 }
 
@@ -567,4 +567,17 @@
     .contact-hero .hero-ref-title {
         font-size: clamp(1.7rem, 7vw, 2.55rem);
     }
+}
+
+/* Global Hero Centering Override */
+body .contact-hero {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+body .contact-hero .hero-ref-content {
+    width: 100% !important;
+    padding: 0 1.5rem !important;
+    margin: 0 auto !important;
 }
