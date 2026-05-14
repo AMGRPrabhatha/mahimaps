@@ -35,6 +35,18 @@ function About() {
     {
       question: "Is Sri Lanka safe for travelers?",
       answer: "Sri Lanka is a welcoming destination. Our team prioritizes safe routes, responsible driving, and clear planning to ensure secure travel for all guests."
+    },
+    {
+      question: "What types of vehicles do you offer?",
+      answer: "Our fleet includes compact Mini Cars, spacious Sedans, 7-seater Mini Vans, and 12-seater High Roof Vans to accommodate any group size."
+    },
+    {
+      question: "Do you offer multi-day island tours?",
+      answer: "Yes, we specialize in multi-day itineraries that cover popular destinations like Sigiriya, Kandy, Ella, and the Southern coast."
+    },
+    {
+      question: "How can I pay for my booking?",
+      answer: "We accept cash payments in local currency (LKR) or major foreign currencies (USD/EUR/GBP) at the time of your journey."
     }
   ];
 

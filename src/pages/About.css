@@ -1047,7 +1047,7 @@ backdrop-filter: blur(8px);
     gap: 1rem;
     color: #0f172a;
     font-size: clamp(1.02rem, 1.45vw, 1.18rem);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .about-page .faq-accordion-question i {
