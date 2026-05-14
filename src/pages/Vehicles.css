@@ -474,10 +474,10 @@
 
 @media (max-width: 760px) {
   .vehicles-hero-redesign {
-    height: 100vh;
-    height: 100svh;
-    min-height: 100vh;
-    min-height: 100svh;
+    height: 60vh;
+    height: 60svh;
+    min-height: 60vh;
+    min-height: 60svh;
     padding-top: 6.8rem;
   }
 
