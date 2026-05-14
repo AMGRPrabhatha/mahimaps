@@ -13,7 +13,8 @@ function Navbar() {
     { to: '/vehicles', label: 'Vehicles' },
     { to: '/tours', label: 'Tours' },
     { to: '/gallery', label: 'Gallery' },
-    { to: '/contact', label: 'Contact' }
+    { to: '/contact', label: 'Contact' },
+    { to: '/about#faq-section', label: 'FAQ' }
   ];
 
   useEffect(() => {
@@ -73,6 +74,7 @@ function Navbar() {
               <li className="mobile-only-btn"><Link to={bookNowTarget} className="nav-link">Book Now</Link></li>
             </ul>
             <Link to={bookNowTarget} className="nav-link desktop-only-btn">Book Now</Link>
+            <Link to="/about#faq-section" className="nav-link desktop-only-btn">FAQ</Link>
             <button 
               className={`mobile-toggle ${mobileMenuOpen ? 'active' : ''}`} 
               id="mobileToggle" 

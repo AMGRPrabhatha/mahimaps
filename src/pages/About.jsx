@@ -172,7 +172,7 @@ function About() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="about-faq" delay={0.2}>
+      <AnimatedSection className="about-faq" id="faq-section" delay={0.2}>
         <div className="container">
           <div className="faq-showcase">
             <aside className="faq-visual-card">
