@@ -6,14 +6,14 @@ function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const lightNavbar = scrolled || mobileMenuOpen;
-  const bookNowTarget = location.pathname === '/' ? '/contact#send-your-ride-plan' : '/vehicles#booking';
+  const bookNowTarget = '/vehicles#booking';
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About Us' },
     { to: '/vehicles', label: 'Vehicles' },
     { to: '/tours', label: 'Tours' },
     { to: '/gallery', label: 'Gallery' },
-    { to: '/contact', label: 'Contact' },
+    { to: '/contact#send-your-ride-plan', label: 'Contact' },
     { to: '/about#faq-section', label: 'FAQ' }
   ];
 
