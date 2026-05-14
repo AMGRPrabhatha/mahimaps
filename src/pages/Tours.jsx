@@ -156,6 +156,7 @@ const filters = ['All', 'Cultural', 'Hill Country', 'Beach', 'Wildlife', 'Advent
 function Tours() {
   const [activeFilter, setActiveFilter] = useState('All');
   const [searchText, setSearchText] = useState('');
+  const [selectedTour, setSelectedTour] = useState(null);
 
   const filteredCards = useMemo(() => {
     return tourCards.filter((card) => {
@@ -218,27 +219,26 @@ function Tours() {
           <div className="tours-card-grid">
             {filteredCards.map((card, index) => (
               <AnimatedSection className="tour-deal-card" delay={0.06 * (index % 6)} key={card.id}>
-                <div className="tour-card-image-wrap">
-                  <img src={card.image} alt={card.title} />
-                  <span className="tour-discount-pill">{card.discount}</span>
-                  <button type="button" className="tour-fav-btn" aria-label={`Save ${card.title}`}>
-                    <i className="fas fa-heart"></i>
-                  </button>
-                </div>
+                <div className="tour-card-clickable" onClick={() => setSelectedTour(card)} style={{cursor: 'pointer'}}>
+                  <div className="tour-card-image-wrap">
+                    <img src={card.image} alt={card.title} />
+                    <span className="tour-discount-pill">{card.discount}</span>
+                  </div>
 
-                <div className="tour-card-content">
-                  <h3>{card.title}</h3>
+                  <div className="tour-card-content">
+                    <h3>{card.title}</h3>
 
-                  <ul className="tour-detail-list">
-                    <li><i className="fas fa-sun"></i><span>{card.duration}</span></li>
-                    <li><i className="fas fa-thumbs-up"></i><span>{card.feature}</span></li>
-                    <li><i className="fas fa-calendar-alt"></i><span>{card.season}</span></li>
-                    <li><i className="fas fa-clock"></i><span>{card.bookBy}</span></li>
-                  </ul>
+                    <ul className="tour-detail-list">
+                      <li><i className="fas fa-sun"></i><span>{card.duration}</span></li>
+                      <li><i className="fas fa-thumbs-up"></i><span>{card.feature}</span></li>
+                      <li><i className="fas fa-calendar-alt"></i><span>{card.season}</span></li>
+                      <li><i className="fas fa-clock"></i><span>{card.bookBy}</span></li>
+                    </ul>
 
-                  <div className="tour-card-footer">
-                    <span className="tour-rating"><i className="fas fa-star"></i> {card.rating.toFixed(1)}</span>
-                    <Link to="/contact" className="tour-book-btn">View Package</Link>
+                    <div className="tour-card-footer">
+                      <span className="tour-rating"><i className="fas fa-star"></i> {card.rating.toFixed(1)}</span>
+                      <button type="button" className="tour-book-btn">View Package</button>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -250,6 +250,65 @@ function Tours() {
           )}
         </div>
       </section>
+
+      {selectedTour && (
+        <div className="tour-modal-overlay" onClick={() => setSelectedTour(null)}>
+          <div className="tour-modal-container" onClick={(e) => e.stopPropagation()}>
+            <button className="tour-modal-close" onClick={() => setSelectedTour(null)} aria-label="Close">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div className="tour-modal-hero">
+              <img src={selectedTour.image} alt={selectedTour.title} />
+              <div className="tour-modal-category">{selectedTour.category}</div>
+            </div>
+            <div className="tour-modal-content-wrap">
+              <div className="tour-modal-header">
+                <h2>{selectedTour.title}</h2>
+                <div className="tour-modal-rating">
+                  <i className="fas fa-star"></i> {selectedTour.rating.toFixed(1)}
+                </div>
+              </div>
+              <div className="tour-modal-stats">
+                <div className="modal-stat">
+                  <i className="fas fa-clock"></i>
+                  <div className="stat-text">
+                    <span className="stat-label">Duration</span>
+                    <span className="stat-val">{selectedTour.duration}</span>
+                  </div>
+                </div>
+                <div className="modal-stat">
+                  <i className="fas fa-calendar-check"></i>
+                  <div className="stat-text">
+                    <span className="stat-label">Best Season</span>
+                    <span className="stat-val">{selectedTour.season}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="tour-modal-desc">
+                <h3>Package Highlights</h3>
+                <p>{selectedTour.feature}. Experience the very best of Sri Lanka with our curated {selectedTour.category.toLowerCase()} travel package. Enjoy stress-free transport, top-rated stays, and deep local insights from our expert guides.</p>
+                <ul className="modal-perks">
+                  <li><i className="fas fa-check-circle"></i> Private Air-Conditioned Vehicle</li>
+                  <li><i className="fas fa-check-circle"></i> English Speaking Driver/Guide</li>
+                  <li><i className="fas fa-check-circle"></i> Flexible Itinerary Adjustments</li>
+                  <li><i className="fas fa-check-circle"></i> 24/7 On-Trip Support</li>
+                </ul>
+              </div>
+              <div className="tour-modal-action-bar">
+                <div className="modal-price-wrap">
+                  <span className="price-label">Special Offer</span>
+                  <span className="price-val">{selectedTour.discount}</span>
+                  <span className="price-sub">{selectedTour.bookBy}</span>
+                </div>
+                <Link to="/contact" className="modal-book-now">Plan This Tour</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

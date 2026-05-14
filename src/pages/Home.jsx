@@ -149,6 +149,30 @@ function Home() {
         </div>
       </AnimatedSection>
 
+      <section className="home-full-showcase">
+        <div className="showcase-grid-modern">
+          <Link to="/tours" className="showcase-card">
+            <img src="/assets/images/card1.jpg" alt="Island Tours" />
+            <div className="showcase-content">
+              <h3>Island Tours</h3>
+            </div>
+          </Link>
+          <a href="#quick-booking" className="showcase-card">
+            <img src="/assets/images/card2.jpg" alt="Airport Transfers" />
+            <div className="showcase-content">
+              <h3>Airport Transfers</h3>
+            </div>
+          </a>
+          <Link to="/vehicles" className="showcase-card">
+            <img src="/assets/images/card3.jpg" alt="Vehicle Fleet" />
+            <div className="showcase-content">
+              <h3>Vehicle Fleet</h3>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+
       <AnimatedSection className="home-section home-intro-section" delay={0.2}>
         <div className="intro-watermark">mahi maps</div>
         <div className="container intro-container">
