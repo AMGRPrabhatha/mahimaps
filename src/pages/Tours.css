@@ -28,10 +28,10 @@
 .tours-hero-banner {
   position: relative;
   overflow: hidden;
-  height: 62vh;
-  height: 62svh;
-  min-height: 62vh;
-  min-height: 62svh;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
   padding: 7.8rem 0 3.4rem;
   margin-bottom: 1.2rem;
   background: linear-gradient(135deg, rgba(8, 21, 39, 0.78), rgba(12, 47, 66, 0.62)),
@@ -351,10 +351,10 @@
 
 @media (max-width: 760px) {
   .tours-hero-banner {
-    height: 56vh;
-    height: 56svh;
-    min-height: 56vh;
-    min-height: 56svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-top: 6.7rem;
     margin-bottom: 0.9rem;
   }

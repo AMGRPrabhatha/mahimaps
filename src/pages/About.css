@@ -254,8 +254,9 @@
             border-radius: 14px;
             color: #f8fafc;
             padding: 0.9rem;
-            backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
+            
         }
 
         .trust-overlay-card strong {
@@ -599,27 +600,27 @@
 
 /* Hero height alignment with Tours */
 .about-hero-modern {
-    height: 70vh;
-    height: 70svh;
-    min-height: 70vh;
-    min-height: 70svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 @media (max-width: 760px) {
     .about-hero-modern {
-        height: 62vh;
-        height: 62svh;
-        min-height: 62vh;
-        min-height: 62svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 }
 
 /* Unified hero size with Tours */
 .about-hero-modern {
-    height: 62vh;
-    height: 62svh;
-    min-height: 62vh;
-    min-height: 62svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .about-hero-inner .hero-ref-title {
@@ -636,10 +637,10 @@
 
 @media (max-width: 760px) {
     .about-hero-modern {
-        height: 56vh;
-        height: 56svh;
-        min-height: 56vh;
-        min-height: 56svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 
     .about-hero-inner .hero-ref-title {
@@ -732,8 +733,8 @@
     .about-page .about-hero-modern {
         /* Allow content to breathe and prevent CTA crop */
         height: auto !important;
-        min-height: 56svh !important;
-        min-height: 56vh !important;
+        min-height: 100svh !important;
+        min-height: 100vh !important;
         padding: 1.25rem 0 1.4rem !important;
     }
 

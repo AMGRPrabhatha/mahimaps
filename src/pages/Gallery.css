@@ -145,8 +145,9 @@
             position: sticky;
             top: 92px;
             z-index: 20;
-            backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
+            
         }
 
         .gallery-filters {
@@ -239,8 +240,9 @@
             font-size: 0.67rem;
             letter-spacing: 0.08em;
             font-weight: 700;
-            backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
+backdrop-filter: blur(6px);
+            
             pointer-events: none;
         }
 
@@ -390,7 +392,7 @@
 
         @media (max-width: 480px) {
             .gallery-hero {
-                height: 70vh;
+                height: 100vh;
             }
             
             .gallery-hero h1 {
@@ -483,27 +485,27 @@
 
 /* Hero height alignment with Tours */
 .gallery-hero {
-    height: 70vh;
-    height: 70svh;
-    min-height: 70vh;
-    min-height: 70svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 @media (max-width: 760px) {
     .gallery-hero {
-        height: 62vh;
-        height: 62svh;
-        min-height: 62vh;
-        min-height: 62svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 }
 
 /* Unified hero size with Tours */
 .gallery-hero {
-    height: 62vh;
-    height: 62svh;
-    min-height: 62vh;
-    min-height: 62svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .gallery-hero .hero-ref-title {
@@ -520,10 +522,10 @@
 
 @media (max-width: 760px) {
     .gallery-hero {
-        height: 56vh;
-        height: 56svh;
-        min-height: 56vh;
-        min-height: 56svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 
     .gallery-hero .hero-ref-title {
@@ -574,8 +576,9 @@
     padding: 0;
     box-shadow: none;
     position: static;
-    backdrop-filter: none;
     -webkit-backdrop-filter: none;
+backdrop-filter: none;
+    
 }
 
 .gallery-filter-head {
@@ -769,8 +772,9 @@ body.gallery-preview-open {
     width: min(960px, 100%);
     max-height: 92vh;
     background: #ffffff !important;
-    backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+backdrop-filter: blur(24px);
+    
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -812,8 +816,9 @@ body.gallery-preview-open {
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
+    
     color: #102138;
     font-size: 1.95rem;
     line-height: 1;

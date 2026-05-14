@@ -335,8 +335,9 @@
             padding: 0.5rem 0.8rem;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
+            
             border: 1px solid rgba(255, 255, 255, 0.2);
             font-size: 0.75rem;
             letter-spacing: 0.05em;
@@ -801,8 +802,9 @@
 
 .modern-route-item {
     background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
+backdrop-filter: blur(24px) saturate(180%);
+    
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 1.5rem;
@@ -1262,8 +1264,9 @@
         .transfer-booking-wrap {
             border-radius: 24px;
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(24px) saturate(180%);
             -webkit-backdrop-filter: blur(24px) saturate(180%);
+backdrop-filter: blur(24px) saturate(180%);
+            
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.4);
             color: #ffffff;
@@ -1722,11 +1725,27 @@
                 margin: 0;
             }
 
-            .transfer-booking-wrap,
             .experience-text,
             .transfer-form,
             .location-seo-copy {
                 padding: 1rem;
+            }
+
+            .transfer-booking-wrap {
+                padding: 1.5rem 1.5rem 3rem;
+                gap: 2rem;
+            }
+
+            .transfer-field {
+                min-width: 0;
+            }
+
+            .transfer-field input[type="date"] {
+                -webkit-appearance: none;
+                appearance: none;
+                min-width: 0;
+                width: 100%;
+                display: block;
             }
 
             .why-choose-item {
@@ -1900,8 +1919,9 @@
     left: 2rem;
     right: 2rem;
     background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+backdrop-filter: blur(24px);
+    
     padding: 1.5rem;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -1968,27 +1988,27 @@
 
 /* Hero height alignment with Tours */
 .home-hero-modern {
-    height: 70vh;
-    height: 70svh;
-    min-height: 70vh;
-    min-height: 70svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 @media (max-width: 760px) {
     .home-hero-modern {
-        height: 62vh;
-        height: 62svh;
-        min-height: 62vh;
-        min-height: 62svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 }
 
 /* Unified hero size with Tours */
 .home-hero-modern {
-    height: 62vh;
-    height: 62svh;
-    min-height: 62vh;
-    min-height: 62svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .home-hero-title {
@@ -2003,10 +2023,10 @@
 
 @media (max-width: 760px) {
     .home-hero-modern {
-        height: 56vh;
-        height: 56svh;
-        min-height: 56vh;
-        min-height: 56svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 
     .home-hero-title {

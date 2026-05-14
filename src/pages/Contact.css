@@ -521,27 +521,27 @@
 
 /* Hero height alignment with Tours */
 .contact-hero {
-    height: 70vh;
-    height: 70svh;
-    min-height: 70vh;
-    min-height: 70svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 @media (max-width: 760px) {
     .contact-hero {
-        height: 62vh;
-        height: 62svh;
-        min-height: 62vh;
-        min-height: 62svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 }
 
 /* Unified hero size with Tours */
 .contact-hero {
-    height: 62vh;
-    height: 62svh;
-    min-height: 62vh;
-    min-height: 62svh;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .contact-hero .hero-ref-title {
@@ -558,10 +558,10 @@
 
 @media (max-width: 760px) {
     .contact-hero {
-        height: 56vh;
-        height: 56svh;
-        min-height: 56vh;
-        min-height: 56svh;
+        height: 100vh;
+        height: 100svh;
+        min-height: 100vh;
+        min-height: 100svh;
     }
 
     .contact-hero .hero-ref-title {
