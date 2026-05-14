@@ -246,12 +246,12 @@ ul {
 }
 
 .navbar.light {
-    background: rgba(8, 22, 40, 0.42);
-    -webkit-backdrop-filter: blur(18px) saturate(165%);
-    backdrop-filter: blur(18px) saturate(165%);
+    background: #ffffff !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
     
-    box-shadow: 0 10px 24px rgba(4, 12, 24, 0.24);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    border-bottom: 1px solid #eeeeee !important;
 }
 
 .nav-container {
