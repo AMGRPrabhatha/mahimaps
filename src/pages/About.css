@@ -732,9 +732,10 @@ backdrop-filter: blur(8px);
 @media (max-width: 760px) {
     .about-page .about-hero-modern {
         /* Allow content to breathe and prevent CTA crop */
-        height: auto !important;
-        min-height: 100svh !important;
-        min-height: 100vh !important;
+        height: 60vh !important;
+        height: 60svh !important;
+        min-height: 60vh !important;
+        min-height: 60svh !important;
         padding: 1.25rem 0 1.4rem !important;
     }
 
