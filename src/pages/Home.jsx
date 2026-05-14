@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import ScrollIndicator from '../components/ScrollIndicator';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
@@ -63,10 +64,7 @@ function Home() {
           </div>
         </div>
 
-        {/* <div className="scroll-indicator-modern">
-          <div className="line"></div>
-          Scroll
-        </div> */}
+        <ScrollIndicator />
       </AnimatedSection>
 
       {/*

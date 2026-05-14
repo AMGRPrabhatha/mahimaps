@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollIndicator from '../components/ScrollIndicator';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import './Contact.css';
@@ -65,6 +66,7 @@ function Contact() {
             <a href="#send-your-ride-plan" className="hero-ref-btn outline">Send Message</a>
           </div>
         </div>
+        <ScrollIndicator />
       </AnimatedSection>
 
       <AnimatedSection className="contact-modern-main" id="send-your-ride-plan" delay={0.2}>

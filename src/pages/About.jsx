@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollIndicator from '../components/ScrollIndicator';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import './About.css';
@@ -73,6 +74,7 @@ function About() {
             <Link to="/tours" className="hero-ref-btn outline">Explore Tours</Link>
           </div>
         </div>
+        <ScrollIndicator />
       </AnimatedSection>
 
       <AnimatedSection className="about-story" id="story" delay={0.2}>

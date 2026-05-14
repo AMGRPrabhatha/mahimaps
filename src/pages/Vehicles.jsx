@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollIndicator from '../components/ScrollIndicator';
 import AnimatedSection from '../components/AnimatedSection';
 import './Vehicles.css';
 
@@ -127,6 +128,7 @@ function Vehicles() {
             <a href="#fleet" className="vehicle-btn outline">View Fleet</a>
           </div>
         </div>
+        <ScrollIndicator />
       </AnimatedSection>
 
       <AnimatedSection className="vehicles-fleet-redesign" id="fleet" delay={0.15}>

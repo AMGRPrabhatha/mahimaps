@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ScrollIndicator from '../components/ScrollIndicator';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import './Gallery.css';
@@ -91,6 +92,7 @@ function Gallery() {
             <Link to="/vehicles#booking" className="hero-ref-btn outline">Book a Ride</Link>
           </div>
         </div>
+        <ScrollIndicator />
       </AnimatedSection>
 
       <section className="gallery-main" id="gallery-grid">

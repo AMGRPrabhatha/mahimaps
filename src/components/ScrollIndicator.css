@@ -1,0 +1,77 @@
+.scroll-indicator-container {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 10;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator-container:hover {
+  opacity: 1;
+}
+
+.scroll-text {
+  color: #ffffff;
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 0.4em; /* Compensate for letter-spacing to truly center */
+}
+
+.scroll-line-wrapper {
+  width: 1.5px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.scroll-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transform-origin: top;
+  animation: scrollLineAnim 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@keyframes scrollLineAnim {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  40% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  40.1% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (max-width: 760px) {
+  .scroll-indicator-container {
+    bottom: 1.5rem;
+  }
+  .scroll-line-wrapper {
+    height: 40px;
+  }
+  .scroll-text {
+    font-size: 0.65rem;
+  }
+}
