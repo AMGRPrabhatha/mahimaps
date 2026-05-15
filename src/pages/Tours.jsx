@@ -176,10 +176,10 @@ function Tours() {
     <div className="tours-page-modern">
       <AnimatedSection className="tours-hero-banner">
         <div className="container tours-hero-inner">
-          <p className="tours-kicker">Sri Lanka Tour Packages</p>
-          <h1>Best holiday deals across Sri Lanka</h1>
-          <p>Compare destinations quickly, filter by travel style, and reserve the package that fits your plan.</p>
-          <div className="tours-hero-cta">
+          <p className="tours-kicker animate-fade-in">Sri Lanka Tour Packages</p>
+          <h1 className="animate-slide-up-delay-1">Best holiday deals across Sri Lanka</h1>
+          <p className="animate-slide-up-delay-2">Compare destinations quickly, filter by travel style, and reserve the package that fits your plan.</p>
+          <div className="tours-hero-cta animate-fade-in-delay-3">
             <Link to="/contact" className="hero-ref-btn primary">Plan My Tour</Link>
             <Link to="/vehicles#booking" className="hero-ref-btn outline">Book a Ride</Link>
           </div>

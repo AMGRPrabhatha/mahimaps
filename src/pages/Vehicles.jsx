@@ -117,13 +117,13 @@ function Vehicles() {
     <div className="vehicles-page-redesign">
       <AnimatedSection className="vehicles-hero-redesign">
         <div className="container vehicles-hero-inner">
-          <p className="vehicles-kicker">Premium Fleet in Sri Lanka</p>
-          <h1>Choose the Right Ride for Every Route</h1>
-          <p>
+          <p className="vehicles-kicker animate-fade-in">Premium Fleet in Sri Lanka</p>
+          <h1 className="animate-slide-up-delay-1">Choose the Right Ride for Every Route</h1>
+          <p className="animate-slide-up-delay-2">
             From airport pickup to full island tours, pick a vehicle that matches your group size,
             luggage, and comfort level.
           </p>
-          <div className="vehicles-hero-actions">
+          <div className="vehicles-hero-actions animate-fade-in-delay-3">
             <a href="#booking" className="vehicle-btn primary">Book a Vehicle</a>
             <a href="#fleet" className="vehicle-btn outline">View Fleet</a>
           </div>
