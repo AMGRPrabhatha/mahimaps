@@ -13,7 +13,7 @@ function Navbar() {
     { to: '/vehicles', label: 'Vehicles' },
     { to: '/tours', label: 'Tours' },
     { to: '/gallery', label: 'Gallery' },
-    { to: '/contact#send-your-ride-plan', label: 'Contact' },
+    { to: '/contact', label: 'Contact' },
     { to: '/about#faq-section', label: 'FAQ' }
   ];
 
@@ -70,7 +70,7 @@ function Navbar() {
           <div className="nav-right">
             <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`} id="navMenuRight">
               <li><Link to="/gallery" className="nav-link">Gallery</Link></li>
-              <li><Link to="/contact#send-your-ride-plan" className="nav-link">Contact</Link></li>
+              <li><Link to="/contact" className="nav-link">Contact</Link></li>
               <li className="mobile-only-btn"><Link to={bookNowTarget} className="nav-link">Book Now</Link></li>
             </ul>
             <Link to={bookNowTarget} className="nav-link desktop-only-btn">Book Now</Link>
